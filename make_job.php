@@ -23,7 +23,7 @@
                 $newjob->id_user = $_POST['id_user'];
                 $newjob->company = $_POST['company'];
                 $newjob->job_title = $_POST['job_title'];
-                $newjob->description = $_POST['description'];
+                $newjob->description = trim($_POST['description']);
                 $newjob->salery = $_POST['salery'];
                 $newjob->location = $_POST['location'];
                 $newjob->contact_user = $_POST['contact_user'];

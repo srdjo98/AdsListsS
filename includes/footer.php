@@ -7,7 +7,7 @@
 
     </div>
     <!-- /.container -->
-
+    <script href="js/all.min.js"></script>
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
 
