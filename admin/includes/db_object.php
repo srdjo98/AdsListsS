@@ -34,6 +34,18 @@ class Db_object {
 
     }
 
+    public static function find_all_limit(){
+
+        return static::find_by_query("SELECT * FROM ".static::$db_table." ORDER BY created_at asc LIMIT 2");
+
+    }
+
+    public static function find_all_new($limit){
+
+        return static::find_by_query("SELECT * FROM ".static::$db_table." ORDER BY created_at asc LIMIT $limit");
+
+    }
+
 
     
 

@@ -30,7 +30,7 @@ class Database {
     public function query($sql){
 
         $result = $this->connection->query($sql);
-        
+        var_dump($sql);
         
         $this->confirm_query($result);
 

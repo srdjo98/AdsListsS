@@ -33,9 +33,9 @@
     </div>
     </div>
     <div  class="row" >
-    <div class="col-md-7 col-xl-7 col-12" style="margin-left: 21%;margin-top:3%;">
+    <div class="col-md-7 col-xl-7 col-12" style="margin-left: 21%;margin-top:3%;" id="ads">
 
-    <?php $jobs = Job::find_all(); ?>
+    <?php $jobs = Job::find_all_limit(); ?>
     <?php foreach($jobs as $job): ?>
         <div  style=";border-radius: 25px;background: #e0e2db;padding: 20px;margin-top:20px;"  >
 
@@ -60,7 +60,31 @@
         ?>
     <?php endforeach; ?>
     </div>
+    <button class="btn btn-primary col-xl-3 " style="margin-left:250px">Show more Ads</button>
     </div>
+   
     </div>
+    
 </div>
     <?php require_once("includes/footer.php"); ?>
+
+
+<script>
+    
+$(document).ready(function(){
+
+    var adsCount  = 2;
+    $("button").click(function(){
+
+        adsCount = adsCount + 2;
+
+        $("#ads").load("load_ads.php", {
+
+            adsNewCount: adsCount
+                
+        });
+    })
+})
+
+    
+</script>
